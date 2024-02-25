@@ -23,7 +23,6 @@ import AdminHomePage from './AdminHomePage';
 const RoutingComp = () => {
     return (
         <BrowserRouter>
-        {/* <WelcomeComp/> */}
         
         <div>
              <Routes>

@@ -7,7 +7,7 @@ import Header1 from './Header1'
 
 
 const CustomerHomePage = () => {
-    //const nav= useNavigate();
+    
     
     const[user,setuser]=useState([])        
 
@@ -33,14 +33,7 @@ const CustomerHomePage = () => {
         fetchData();
     },[])
 
-//     const orderordelivery=(event)=>{
-//         event.preventDefault();           //to prevent page loading
-//         axios.post(http://localhost:8089/messportal/orders/reg/add, BookingDetails).then(() => {
-//           window.alert("details added successfully");
-//           nav("/signin");
-//         }).catch((err) => { })
-   
-//    }
+
     
     const  fetchData= async()=>{
         const token=localStorage.getItem('token');
@@ -63,12 +56,7 @@ const CustomerHomePage = () => {
         }).catch((err)=>{})
     }
 
-    // const orderordelivery=(event)=>{
-    //     axios.get(http://localhost:8089/messportal/menu/menudetails/vendor/${vendorId}).then((res)=>{
-    //        // console.log(res.data);
-    //         setMenuDetails(res.data);
-    //     }).catch((err)=>{})
-    // }
+    
 
     return (
         <div >
@@ -115,13 +103,7 @@ const CustomerHomePage = () => {
         <Modal.Title>{item.userName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        {/* <table>
-        <tr>
-        <th>Type : </th><th>{item.type}</th>{" "}
-        <th>Menu : </th><th>{item.description}</th>{" "}
-        <th>Price : </th><th>{item.price}</th>{" "}
-        </tr>
-        </table> */}
+        
         <table className='container table table-hover table-striped mt-4'>
         <thead>
             <tr className='table table-dark'>
@@ -140,7 +122,6 @@ const CustomerHomePage = () => {
                     <td>{val1.price}</td>
                     <td>
                     <Link to={`/booking/${val1.id}`} className="btn btn-outline-danger btn-sm">Book</Link> {" "}
-                    {/* <button name='book' className ="btn btn-outline-warning btn-sm" type="button"  >Book</button>  */}
                     <Link to={`/delivery/${val1.id}`} className="btn btn-outline-danger btn-sm">Delivery</Link> {" "}
                     <Link to={`/subscription/${val1.id}`} className="btn btn-outline-danger btn-sm">Subscribe</Link> 
                     </td>

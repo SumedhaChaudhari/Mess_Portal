@@ -45,7 +45,6 @@ const DailyOrder = () => {
         </thead>
         <tbody>
             {user.map((val,index)=>{
-               // var data=val.split('');
                 return <tr key={index}>
                     <td>{index+1}</td>              
                     <td>{val}</td>  

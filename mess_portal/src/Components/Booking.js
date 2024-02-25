@@ -22,12 +22,7 @@ const Booking = () => {
     addressId: menu.vendorId
   };
 
-  // setBooking({
-  //   DELIVERY_TYPE:0,
-  //   AddressId:menu.vendorId,
-  //   menuId:menu.id,
-  //   vendorId:menu.vendorId
-  // })
+  
   
 
 
@@ -51,11 +46,11 @@ const Booking = () => {
   }
 
   const saveBooking = (event) => {
-    event.preventDefault();   //to prevent page loading
+    event.preventDefault();   
     console.log(Booking);
     axios.post(`http://localhost:8089/messportal/orders/add`, Booking).then(() => {
       window.alert("details added successfully");
-      //nav("/signin");
+      
     }).catch((err) => { })
   }
   useEffect(() => {
@@ -63,10 +58,7 @@ const Booking = () => {
     fetchData(id);
   }, [])
 
-  // const inputchangehandler = (event) => {
-  //   const { type, name, value } = event.target;
-  //   setBooking({ ...Booking, [name]: value })
-  // }
+  
 
   return (
     <div >
@@ -94,29 +86,7 @@ const Booking = () => {
             <Form.Control type="number"  required value={menu.price} readOnly />
           </Form.Group>
         </Row>
-        {/*           
-          <table className='container table table-hover table-striped mt-4'>
-        <thead>
-            <tr className='table table-dark'>
-                <th>Sr.No</th><th>Type</th><th>Menu</th><th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-               <tr >          
-               <td >{menu.id}</td>    
-                    <td onChange={}>{menu.type}</td>
-                    <td >{menu.description}</td>
-                    <td >{menu.price}</td>
-                    menu.
-                    {/* <td>
-                    
-                    <button name='delivery' className="btn  btn-outline-success btn-sm" type="button" >Confirm</button>{" "}
-   
-                    </td> 
-                    
-                </tr>     
-        </tbody>
-        </table> */}
+        
         <Button className="mt-4" variant="primary" type="submit" > Confirm </Button>
       </Form>
       </div>

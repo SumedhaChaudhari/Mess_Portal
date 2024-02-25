@@ -32,16 +32,12 @@ const Signin_Customer_Vendor = () => {
 
 
     const addDetails=(event)=>{
-        event.preventDefault();           //to prevent page loading
+        event.preventDefault();           
         // console.log(item);
         axios.post(`http://localhost:8089/messportal/users/login`,item).then((res)=>{
-            // window.alert("details added successfully");
-            // nav("/homepage1");
-           // console.log(item.password);
             const token= res.data;
            // console.log(res.data);
             localStorage.setItem("token",res.data.token);
-            //setAuthToken(token);
             if(selectedOption=="Customer")
             {
               
@@ -54,13 +50,7 @@ const Signin_Customer_Vendor = () => {
         }).catch((err)=>{})
     }
 
-  //   const setAuthToken = token => {
-  //     if (token) {
-  //        return axios.defaults.headers.common["Authorization"] = Bearer ${token};
-  //     }
-  //     else
-  //        return delete axios.defaults.headers.common["Authorization"];
-  //  }
+  
 
     
 

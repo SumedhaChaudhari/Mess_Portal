@@ -39,20 +39,12 @@ const Signup_Customer_vendor = () => {
     };
 
   const addUser=(event)=>{
-      event.preventDefault();           //to prevent page loading
+      event.preventDefault();           
        console.log(item);
       console.log("roleid state method"+item.roleId);
       axios.post(`http://localhost:8089/messportal/users/reg/add`,item).then(()=>{
           window.alert("details added successfully");
           nav("/signin");
-          // if(selectedOption=="Customer")
-          // {
-            
-          //   nav("/homepage1");
-          // }
-          // else{
-          //   nav("/homepage2");
-          // }
           
       }).catch((err)=>{})
   }
@@ -68,19 +60,7 @@ const Signup_Customer_vendor = () => {
         <Form onSubmit={addUser}>
 
         <Row className="mb-3 mt-3">
-              {/* <Dropdown name="roleId">
-                
-                  <DropdownButton   title={item.roleId ? Selected: ${item.roleId} : 'Sign in as '} onChange={inputchangehandler}>
-                 { ucourses.map((val,index)=>{
-                                return <Dropdown.Item  key={index} value={val} >{val}</Dropdown.Item>
-                            })
-                          }
-                   
-                    {/* <Dropdown.Item  eventKey="1" >Customer</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">Vendor</Dropdown.Item>
-                    <Dropdown.Item eventKey="3">Admin</Dropdown.Item> */}
-                  {/* </DropdownButton>
-                </Dropdown> */} 
+              
                 <select name='roleId' className='form-control' onChange={inputchangehandler} >
                         <option value="">Select Your role</option>
                         {
