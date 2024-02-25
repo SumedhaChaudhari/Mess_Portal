@@ -1,0 +1,63 @@
+.Home{
+    padding-left: 50px;
+}
+.About{
+    padding-left: 50px;
+}
+.Contact{
+    padding-left: 50px;
+}
+.signup {
+    margin-left: 400px;
+}
+.signin{
+    margin-left: 30px;
+    
+}
+.h11{
+    margin-top: 40px;
+}
+
+#customer{
+    align-items: center;
+    margin-left : 500px;
+}
+
+#vendor{
+    align-items: center;
+    margin-left: 500px;
+}
+
+#title{
+    font-family:cursive
+}
+
+.links {
+    font-weight: bolder;
+    font-size: larger;
+    
+}
+
+.navbar-title{
+    font-family:cursive;
+
+}
+/* .loginh{
+    color: rgb(95, 95, 100);
+    font-weight: bolder;
+    
+} */
+
+/* .form1{
+    border: 2px solid black;
+    background-color: rgb(214, 232, 250);
+} */
+
+.radio{
+    /* margin-left: 300px; */
+    margin-right: 600px;
+}
+.form2{
+    margin-left: 300px;
+
+}
