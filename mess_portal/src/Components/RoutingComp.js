@@ -19,6 +19,9 @@ import MonthlyReport from './MonthlyReport';
 import PageNotFound from './PageNotFound';
 import Booking from './Booking';
 import AdminHomePage from './AdminHomePage';
+import About from './About';
+import Contact from './Contact';
+
 
 const RoutingComp = () => {
     return (
@@ -41,6 +44,8 @@ const RoutingComp = () => {
                  <Route path='dailydelivery' element={<DailyDelivery/>}></Route>
                  <Route path='report' element={<MonthlyReport/>}></Route>
                  <Route path='homepage3' element={<AdminHomePage/>}></Route>
+                 <Route path='about' element={<About/>}></Route>
+                 <Route path='contact' element={<Contact/>}></Route>
                  <Route path='/*' element={<PageNotFound/>}></Route>
                  
                  
